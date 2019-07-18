@@ -23,9 +23,15 @@ defmodule Discuss.Router do
     # put "/topics/:id", TopicController, :update
     # get "/topics/:id", TopicController, :show
     # delete "/topics/:id/delete", TopicController, :delete
-    resources "/"
+    resources "/topics", TopicController
   end
 
+  scope "/auth", Discuss do
+    pipe_through :browser
+
+    get "/:provider", AuthController, :request
+    get "/:provider/callback", AuthController, :callback
+  end
   # Other scopes may use custom stacks.
   # scope "/api", Discuss do
   #   pipe_through :api
