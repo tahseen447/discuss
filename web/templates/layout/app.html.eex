@@ -17,7 +17,7 @@
   <body>
     <nav class="light-blue">
       <div class="nav-wrapper container">
-        <a href="/topics" class="brand-logo">
+        <a href="/" class="brand-logo">
           Discussions
         </a>
         <ul class="right">
