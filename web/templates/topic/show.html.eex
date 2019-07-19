@@ -1,7 +1,1 @@
 <h5><%= @topic.title %></h5>
-
-<div class="fixed-action-btn">
-  <%= link to: topic_path(@conn, :edit), class: "btn-floating btn-large waves-effect waves-light red" do %>
-    <i class="material-icons"> edit </i>
-  <% end %>
-</div>
